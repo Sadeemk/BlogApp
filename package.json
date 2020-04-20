@@ -1,0 +1,25 @@
+{
+  "name": "blogapp",
+  "version": "1.0.0",
+  "description": "RESTful routing",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sadeemk/BlogApp.git"
+  },
+  "author": "Sadeem Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sadeemk/BlogApp/issues"
+  },
+  "homepage": "https://github.com/Sadeemk/BlogApp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9"
+  }
+}
