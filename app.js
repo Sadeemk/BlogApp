@@ -24,12 +24,29 @@ app.get('/', (req, res) => {
 	res.redirect('/blogs');
 });
 
+//Index Route
 app.get('/blogs', (req, res) => {
 	Blog.find({}, function(err, blogs) {
 		if (err) {
 			console.log(err);
 		} else {
 			res.render('index', { blogs: blogs });
+		}
+	});
+});
+
+//New Route
+app.get('/blogs/new', (req, res) => {
+	res.render('new');
+});
+
+//Create Route
+app.post('/blogs', (req, res) => {
+	Blog.create(req.body.blog, function(err, newBlog) {
+		if (err) {
+			res.render('new');
+		} else {
+			res.redirect('/blogs');
 		}
 	});
 });
