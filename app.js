@@ -51,6 +51,17 @@ app.post('/blogs', (req, res) => {
 	});
 });
 
+//Show Route
+app.get('/blogs/:id', (req, res) => {
+	Blog.findById(req.params.id, function(err, foundBlog) {
+		if (err) {
+			res.redirect('/blogs');
+		} else {
+			res.render('show', { blog: foundBlog });
+		}
+	});
+});
+
 app.listen(3000, () => {
 	console.log('Server started on port 3000');
 });
